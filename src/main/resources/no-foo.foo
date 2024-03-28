@@ -1,0 +1,17 @@
+
+DROP TABLE IF EXISTS customers CASCADE;
+DROP TABLE IF EXISTS customer_orders CASCADE;
+
+CREATE TABLE customers (
+                           id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                           orgoid VARCHAR(255),
+                           name VARCHAR(255),
+                           email VARCHAR(255)
+);
+
+CREATE TABLE customer_orders (
+                        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                        customer_id BIGINT,
+                        details VARCHAR(255),
+                        FOREIGN KEY (customer_id) REFERENCES customers(id)
+);

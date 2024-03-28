@@ -1,0 +1,6 @@
+INSERT INTO customers (orgoid, name, email) VALUES ('org1', 'Alice Smith', 'alice@example.com');
+INSERT INTO customers (orgoid, name, email) VALUES ('org2', 'Bob Johnson', 'bob@example.com');
+
+INSERT INTO customer_orders (customer_id, details) VALUES (1, 'Order 1 for Alice');
+INSERT INTO customer_orders (customer_id, details) VALUES (1, 'Order 2 for Alice');
+INSERT INTO customer_orders (customer_id, details) VALUES (2, 'Order 1 for Bob');
